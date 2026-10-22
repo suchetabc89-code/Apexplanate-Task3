@@ -1,0 +1,1086 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #c2cdd8;
+
+    color: #222;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================
+   NAVIGATION
+   FLEXBOX
+========================================= */
+
+header {
+
+    background: #222;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.navbar {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 15px 25px;
+
+
+    /* FLEXBOX */
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+.nav-links {
+
+    /* FLEXBOX */
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.nav-links a:hover {
+
+    color: #00bcd4;
+}
+
+
+
+/* =========================================
+   MAIN CONTAINER
+   CSS GRID
+========================================= */
+
+.container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+
+
+    /* CSS GRID */
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+
+/* =========================================
+   HOME SECTION
+========================================= */
+
+.home-section {
+
+    background: rgb(187, 230, 236);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    grid-column: 1 / -1;
+}
+
+
+.home-section h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =========================================
+   FEATURE CARDS
+   CSS GRID
+========================================= */
+
+.feature-grid {
+
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.feature-card {
+
+    background: #af9dd1;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #dce8f7;
+}
+
+
+.feature-card h3 {
+
+    margin-bottom: 10px;
+}
+
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-section {
+
+    background: rgb(185, 229, 169);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+
+    /* Make the complete contact
+       div centered */
+
+    grid-column: 1 / -1;
+
+    width: 60%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+.contact-section h2 {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #007bff;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+}
+
+
+
+/* Error messages */
+
+small {
+
+    display: block;
+
+    color: red;
+
+    margin-top: 5px;
+
+    min-height: 20px;
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+
+    border: none;
+
+    background: #5e6839;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+button:hover {
+
+    background: #2a764f;
+}
+
+
+#successMessage {
+
+    color: green;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================================
+   IMAGE GALLERY
+   CSS GRID
+========================================= */
+
+.gallery-section {
+
+    background: rgb(241, 236, 187);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    grid-column: 1 / -1;
+}
+
+
+.gallery-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+.section-description {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #555;
+}
+
+
+/* CSS GRID */
+
+.image-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.image-card {
+
+    background: #cdcccc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+.image-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.image-card h3 {
+
+    padding: 15px;
+}
+
+
+
+/* =========================================
+   TO-DO LIST
+========================================= */
+
+.todo-section {
+
+    background: rgb(219, 167, 170);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    grid-column: 1 / -1;
+}
+
+
+.todo-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+.todo-input {
+
+    /* FLEXBOX */
+
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+#taskInput {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+#taskList {
+
+    list-style: none;
+
+    max-width: 700px;
+
+    margin: 25px auto 0;
+}
+
+
+#taskList li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #f1f1f1;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 6px;
+}
+
+
+.task-text {
+
+    cursor: pointer;
+
+    flex: 1;
+}
+
+
+.completed {
+
+    text-decoration: line-through;
+
+    color: gray;
+}
+
+
+.delete-btn {
+
+    background: #dc3545;
+
+    padding: 7px 12px;
+
+    font-size: 14px;
+}
+
+
+.delete-btn:hover {
+
+    background: #a71d2a;
+}
+
+
+
+/* =========================================
+   INTERACTIVE QUIZ
+========================================= */
+
+.quiz-section {
+
+    background: #f3dfb3;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    width: 75%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+}
+
+
+.quiz-section h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.quiz-info {
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+#questionNumber {
+
+    color: #666;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+#question {
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+
+/* Answer Grid */
+
+.answers {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.answer-button {
+
+    background: #ffffff;
+
+    color: #222;
+
+    border: 2px solid #ccc;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.answer-button:hover {
+
+    background: #e8e8e8;
+}
+
+
+/* Correct */
+
+.answer-button.correct {
+
+    background: #28a745;
+
+    color: white;
+
+    border-color: #28a745;
+}
+
+
+/* Wrong */
+
+.answer-button.wrong {
+
+    background: #dc3545;
+
+    color: white;
+
+    border-color: #dc3545;
+}
+
+
+#nextButton {
+
+    background: #5e6839;
+}
+
+
+#nextButton:hover {
+
+    background: #2a764f;
+}
+
+
+#quizResult {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================================
+   API SECTION
+========================================= */
+
+.api-section {
+
+    background: rgb(190, 220, 235);
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    width: 75%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+}
+
+
+.api-section h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.joke-box {
+
+    min-height: 130px;
+
+    margin: 25px 0;
+
+    padding: 25px;
+
+    background: #f1f1f1;
+
+    border-radius: 10px;
+
+
+    /* FLEXBOX */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+#joke {
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   TABLET
+   MAX WIDTH: 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+
+    /* Navigation */
+
+    .navbar {
+
+        padding: 15px 20px;
+    }
+
+
+    .nav-links {
+
+        gap: 12px;
+    }
+
+
+    .nav-links a {
+
+        font-size: 14px;
+    }
+
+
+
+    /* Feature cards */
+
+    .feature-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    /* Contact */
+
+    .contact-section {
+
+        width: 80%;
+    }
+
+
+
+    /* Gallery */
+
+    .image-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    /* Quiz */
+
+    .quiz-section {
+
+        width: 85%;
+    }
+
+
+
+    /* API */
+
+    .api-section {
+
+        width: 85%;
+    }
+
+
+
+    /* Font size */
+
+    .home-section h1 {
+
+        font-size: 32px;
+    }
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   MOBILE
+   MAX WIDTH: 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+
+    /* =====================================
+       NAVIGATION
+    ====================================== */
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+    }
+
+
+    .nav-links {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        width: 100%;
+    }
+
+
+    .nav-links a {
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       MAIN CONTAINER
+    ====================================== */
+
+    .container {
+
+        padding: 20px 12px;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+
+    /* =====================================
+       HOME
+    ====================================== */
+
+    .home-section {
+
+        padding: 20px;
+    }
+
+
+    .home-section h1 {
+
+        font-size: 27px;
+    }
+
+
+    .home-section p {
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       FEATURE CARDS
+    ====================================== */
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+
+    /* =====================================
+       CONTACT
+    ====================================== */
+
+    .contact-section {
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+
+    .form-group input,
+    .form-group textarea {
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       IMAGE GALLERY
+    ====================================== */
+
+    .gallery-section {
+
+        padding: 20px;
+    }
+
+
+    .image-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .image-card img {
+
+        height: 220px;
+    }
+
+
+
+    /* =====================================
+       TO-DO
+    ====================================== */
+
+    .todo-section {
+
+        padding: 20px;
+    }
+
+
+    .todo-input {
+
+        flex-direction: column;
+    }
+
+
+    #taskInput {
+
+        width: 100%;
+    }
+
+
+    .todo-input button {
+
+        width: 100%;
+    }
+
+
+
+    /* =====================================
+       QUIZ
+    ====================================== */
+
+    .quiz-section {
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+
+    .quiz-section h2 {
+
+        font-size: 26px;
+    }
+
+
+    #question {
+
+        font-size: 19px;
+    }
+
+
+    /* Answers become one column */
+
+    .answers {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .answer-button {
+
+        width: 100%;
+    }
+
+
+    #nextButton {
+
+        width: 100%;
+    }
+
+
+
+    /* =====================================
+       API
+    ====================================== */
+
+    .api-section {
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+
+    .api-section h2 {
+
+        font-size: 26px;
+    }
+
+
+    #joke {
+
+        font-size: 16px;
+    }
+
+
+    #jokeButton {
+
+        width: 100%;
+    }
+
+
+
+    /* =====================================
+       FOOTER
+    ====================================== */
+
+    footer {
+
+        font-size: 14px;
+    }
+
+}
+
+/* Image */
+.main-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 100px auto;
+    border-radius: 10px;
+}

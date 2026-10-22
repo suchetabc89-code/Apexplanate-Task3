@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sucheta Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="task3.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION - FLEXBOX
+    ========================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Sucheta Website
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#contact">Contact</a>
+
+                <a href="#gallery">Gallery</a>
+
+                <a href="#todo">To-Do</a>
+
+                <a href="#quiz">Quiz</a>
+
+                <a href="#api">API</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         CSS GRID
+    ========================================== -->
+
+    <main class="container">
+
+
+        <!-- =====================================
+             ABOUT ME
+        ====================================== -->
+
+        <section id="home" class="home-section">
+
+            <h1>ABOUT ME</h1>
+
+
+            <p>
+
+                Detail-oriented Electronics and Communication Engineering undergraduate (CGPA: 7.98) with hands-on experience in analog and digital circuit, and web development. Skilled in C programming. Comfortable taking a hardware or software idea from concept through a working prototype.            
+
+            </p>
+
+
+
+            <!-- Feature Cards -->
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        Hardware & Embedded Skills
+                    </h3>
+
+                    <p>
+                        Analog and Digital Circuit Design, Soldering.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        Programming Skills
+                    </h3>
+
+                    <p>
+                       C Programming and Web Development Technologies (HTML, CSS, JavaScript (Basics)). 
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        Currently Exploring
+                    </h3>
+
+                    <p>
+                        Python, DSA, MATLAB.
+                    </p>
+
+                </div>   
+
+                        <!-- Link Section -->
+                <section>
+                <h2>Useful Link</h2>
+                <p>
+                    This is my linkedin account
+                <a href="https://www.linkedin.com/in/sucheta-mukhopadhyay-33b553420"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    linkedin
+                </a>
+                
+                </p>
+                <h2>My Image</h2>
+                </section>
+
+                 <!-- Image Section -->
+                <section>
+                <img
+                src="sucheta.jpeg"
+                alt="Computer and programming"
+                class="main-image">
+                </section>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT FORM
+        ========================================== -->
+
+        <section id="contact" class="contact-section">
+
+            <h2>Contact Form</h2>
+
+
+            <form id="contactForm">
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+
+                    <small id="nameError"></small>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+
+
+                    <small id="emailError"></small>
+
+                </div>
+
+
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Enter your message"
+                    ></textarea>
+
+
+                    <small id="messageError"></small>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button type="submit">
+                    Submit
+                </button>
+
+
+                <p id="successMessage"></p>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PROJECT IMAGE GALLERY
+        ========================================== -->
+
+        <section id="gallery" class="gallery-section">
+
+
+            <h2>
+                Project Image Gallery
+            </h2>
+
+
+            <p class="section-description">
+
+                These projects demonstrate my practical
+                experience in electronics and embedded systems.
+
+            </p>
+
+
+
+            <div class="image-grid">
+
+
+                <!-- Digital Clock -->
+
+                <div class="image-card">
+
+                    <img
+                        src="fwe.jpeg"
+                        alt="fwe"
+                    >
+
+                    <h3>
+                        Full Wave Rectifier with Capacitive Filter to achieve 10% Duty Cycle
+                    </h3>
+
+                </div>
+
+
+
+                <!-- Spider Robot -->
+
+                <div class="image-card">
+
+                    <img
+                        src="line detector.jpeg"
+                        alt="Line Detector"
+                    >
+
+                    <h3>
+                        Line Detector without Microcontroller
+                    </h3>
+
+                </div>
+
+
+
+                <!-- Amplifier -->
+
+                <div class="image-card">
+
+                    <img
+                        src="counter_ic.jpeg"
+                        alt="Counter IC"
+                    >
+
+                    <h3>
+                        LED Chaser driven by an NE555 Timer Clock
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             DYNAMIC TO-DO LIST
+        ========================================== -->
+
+        <section id="todo" class="todo-section">
+
+
+            <h2>
+                Dynamic To-Do List
+            </h2>
+
+
+            <p class="section-description">
+
+                Add, complete and remove tasks using JavaScript.
+
+            </p>
+
+
+
+            <div class="todo-input">
+
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task"
+                >
+
+
+                <button id="addTask">
+                    Add Task
+                </button>
+
+
+            </div>
+
+
+
+            <ul id="taskList"></ul>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             INTERACTIVE QUIZ
+        ========================================== -->
+
+        <section id="quiz" class="quiz-section">
+
+
+            <h2>
+                Interactive Quiz
+            </h2>
+
+
+            <p class="quiz-info">
+                Test your knowledge of HTML, CSS and JavaScript.
+            </p>
+
+
+            <p id="questionNumber">
+                Question 1 of 5
+            </p>
+
+
+            <h3 id="question">
+                Question will appear here
+            </h3>
+
+
+
+            <!-- Answers generated by JavaScript -->
+
+            <div id="answers" class="answers">
+
+            </div>
+
+
+
+            <button id="nextButton">
+                Next Question
+            </button>
+
+
+            <p id="quizResult"></p>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             API DATA
+        ========================================== -->
+
+        <section id="api" class="api-section">
+
+
+            <h2>
+                Random Joke API
+            </h2>
+
+
+            <p class="section-description">
+
+                This section fetches real-time data from
+                a public API using JavaScript.
+
+            </p>
+
+
+
+            <div class="joke-box">
+
+                <p id="joke">
+                    Click the button to load a random joke.
+                </p>
+
+            </div>
+
+
+
+            <button id="jokeButton">
+                Get New Joke
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Subhrangsu Website |
+            HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="task3.js"></script>
+
+
+</body>
+
+</html>
+
